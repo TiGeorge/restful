@@ -1,6 +1,8 @@
 package com.example.restfuldemo.payroll;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +19,9 @@ public class Order {
     private String description;
     private Status status;
 
-    public Order() {
-    }
 
+    public Order(String description, Status status) {
+        this.description = description;
+        this.status = status;
+    }
 }
